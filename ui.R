@@ -33,7 +33,7 @@ shinyUI(fluidPage(
                         value = 200), 
             hr(),
             print(HTML("When I tried to draw a circle, 
-                   I made a all-star trignometric mistake by using 360 instead 
+                   I made an all-star trignometric mistake by using 360 instead 
                    of 2&pi; in my code. It turns out to be a beautiful mistake."))
         ),
 
