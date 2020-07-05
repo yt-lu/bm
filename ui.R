@@ -29,15 +29,15 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             numericInput("m",
-                         "The maximum radians, m",
+                         "The maximum radians",
                          value = 360), 
             numericInput("n",
-                        "The number of points, n",
+                        "The number of points",
                         value = 200), 
             hr(),
-            print(HTML("When I tried to code a circle, 
-                       I made an all-star trignometric mistake by using 360 instead of 
-                       2&pi; as upper bound in launching a sequence of 200 angles. 
+            print(HTML("When I tried to draw a circle in the software R, 
+                       I made an all-star trignometric mistake by initiating 
+                       an arithmetic sequence of 200 angles between 0 and 360 (instead of 2&pi;). 
                        It turns out to be a beautiful mistake."))
         ),
 
