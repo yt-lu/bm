@@ -28,13 +28,17 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
+            numericInput("m",
+                         "The maximum radians, m",
+                         value = 360), 
             numericInput("n",
-                        "Type in an integer:",
+                        "The number of points, n",
                         value = 200), 
             hr(),
-            print(HTML("When I tried to draw a circle, 
-                   I made an all-star trignometric mistake by using 360 instead 
-                   of 2&pi; in my code. It turns out to be a beautiful mistake."))
+            print(HTML("When I tried to code a circle, 
+                       I made an all-star trignometric mistake by using 360 instead of 
+                       2&pi; as upper bound in launching a sequence of 200 angles. 
+                       It turns out to be a beautiful mistake."))
         ),
 
         # Show a plot of the generated distribution
