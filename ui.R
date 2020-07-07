@@ -36,20 +36,19 @@ shinyUI(fluidPage(
                         "The number of points",
                         value = 200), 
             sliderInput("u",
-                        "Slide to rotate the graph",
+                        "Slide to reorient the graph",
                         min = 0, max = 180, value = 0, ticks = FALSE,
                         ),
             hr(),
-            print(HTML("The increment angle &theta; is the rotation from one point to the next, 
-            along the invisible circumscribed circle in degrees. For example:
+            print(HTML("The increment angle &theta; (in degrees) is the rotation from one point to the next 
+            along the invisible circumscribed circle. For example:
             
-            <ul><li style = 'margin-bottom:0.3em;'>&theta; = 120&deg; draws a perfect triangle.</li>
+            <ul><li style = 'margin-bottom:0.3em;'>&theta; = 120&deg; with 4 points draws a perfect triangle.</li>
                        <li style = 'margin-bottom:0.3em;'>&theta; = 120.3&deg; with 40 points
                        draws an artistic triangle.</li>
                        <li style = 'margin-bottom:0.3em;'>&theta; = 120.005&deg; with 400 points draws
                        an almost perfect and almost artistic triangle.</li></ul>"))
         ),
-
         # Show a plot of the generated distribution
         mainPanel(
             plotOutput("distPlot"),
