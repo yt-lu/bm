@@ -28,17 +28,26 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-            numericInput("m",
-                         "The maximum radians",
-                         value = 360), 
+            withMathJax(),
+            numericInput("dt",
+                         "The increment angle \\(\\theta\\)",
+                         value = 103.65), 
             numericInput("n",
                         "The number of points",
                         value = 200), 
+            sliderInput("u",
+                        "Slide to rotate the graph",
+                        min = 0, max = 180, value = 0, ticks = FALSE,
+                        ),
             hr(),
-            print(HTML("When I tried to draw a circle in the software R, 
-                       I made an all-star trignometric mistake by initiating 
-                       an arithmetic sequence of 200 angles between 0 and 360 (instead of 2&pi;). 
-                       It turns out to be a beautiful mistake."))
+            print(HTML("The increment angle &theta; is the rotation from one point to the next, 
+            along the invisible circumscribed circle in degrees. For example:
+            
+            <ul><li style = 'margin-bottom:0.3em;'>&theta; = 120&deg; draws a perfect triangle.</li>
+                       <li style = 'margin-bottom:0.3em;'>&theta; = 120.3&deg; with 40 points
+                       draws an artistic triangle.</li>
+                       <li style = 'margin-bottom:0.3em;'>&theta; = 120.005&deg; with 400 points draws
+                       an almost perfect and almost artistic triangle.</li></ul>"))
         ),
 
         # Show a plot of the generated distribution
